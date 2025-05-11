@@ -10,15 +10,6 @@ function Footer() {
               <span className="text-lg font-semibold text-gray-800 dark:text-white">MovieExplorer</span>
             </div>
 
-            <div className="text-center md:text-right">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Made with <Heart className="inline-block w-4 h-4 text-red-500 mx-1" /> for movie lovers
-              </p>
-              <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                Powered by <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer"
-                              className="hover:underline hover:text-purple-700 dark:hover:text-purple-400 transition-colors">TMDb</a>
-              </p>
-            </div>
           </div>
 
           <div className="flex justify-center mt-8 space-x-6">
