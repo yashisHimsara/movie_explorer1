@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Popcorn, Eye, EyeOff } from 'lucide-react'; // Changed icon
+import { Popcorn, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import ErrorMessage from '../components/ui/ErrorMessage';
 
@@ -28,6 +28,12 @@ function LoginPage() {
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  // ✅ New function to fill demo data
+  const handleUseDemoData = () => {
+    setUsername('demoUser');
+    setPassword('demoPass');
   };
 
   return (
@@ -97,6 +103,14 @@ function LoginPage() {
                   {isLoading ? 'Signing in...' : 'Sign in'}
                 </button>
               </div>
+
+              {/* ✅ New line added here */}
+              <p
+                  onClick={handleUseDemoData}
+                  className="text-center text-sm text-purple-600 hover:underline cursor-pointer mt-2"
+              >
+                Use demo data
+              </p>
             </form>
           </div>
         </div>
